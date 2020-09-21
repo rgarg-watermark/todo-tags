@@ -1,28 +1,23 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Implemented a TODO application backend with Rails 4 and mongodb, provided only RESTful API, used postman talk to this application, also used rabl to render json response
 
-Things you may want to cover:
+TODO application backend includes:
 
-* Ruby version
+* Create todo item
 
-* System dependencies
+* Mark todo item status as start, finish or not start
 
-* Configuration
+* Delete todo item, undo deleted todo item
 
-* Database creation
+* Tags can be attached to todo item
 
-* Database initialization
+* Find all todo items by tag
 
-* How to run the test suite
+* Modify todo item
 
-* Services (job queues, cache servers, search engines, etc.)
+* Pagination of todo item list
 
-* Deployment instructions
+■ Postman Collection -
 
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+https://github.com/rgarg-watermark/todo-tags/tree/master/public/data/Todo.postman_collection.json

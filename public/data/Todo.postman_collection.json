@@ -1,0 +1,114 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Todo",
+		"_postman_id": "e34cb72d-34b2-9023-2c91-3acd6f97d2d8",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Todo List",
+			"request": {
+				"url": {
+					"raw": "http://localhost:3000/todo_items.json?page=1&tags=work",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"todo_items.json"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "tags",
+							"value": "work",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Create Todo",
+			"request": {
+				"url": "http://localhost:3000/todo_items.json",
+				"method": "POST",
+				"header": [
+					{
+						"key": "con",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"todo_item\": {\n\t\t\"title\": \"Client Call\",\n\t\t\"tags\": [\"call\", \"work\"]\n\t}\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Update Todo",
+			"request": {
+				"url": "http://localhost:3000/todo_items/5f689834b56a4a236cc163d8.json",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"todo_item\": {\n\t\t\"status\": \"start\",\n\t\t\"description\": \"started todo\",\n\t\t\"tags\": [\"call\"]\n\t}\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Todo Item",
+			"request": {
+				"url": "http://localhost:3000/todo_items/5f678218b56a4a60286b440e.json",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Restore Todo Item",
+			"request": {
+				"url": "http://localhost:3000/todo_items/5f678218b56a4a60286b440e/restore.json",
+				"method": "PUT",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
