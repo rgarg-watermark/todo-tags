@@ -4,7 +4,6 @@ Rails.application.routes.draw do
       put :restore
     end
   end
-  resources :todo_items, :except => [:new, :edit, :update, :destroy]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
